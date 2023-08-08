@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/kimtaeyoon/Documents/SeSAC/Assign/Sesac_API_Assign/Sesac_API_Assign.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
