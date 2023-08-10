@@ -8,11 +8,32 @@
 import UIKit
 import SwiftyJSON
 class TranslateVC:UIViewController{
+    @IBOutlet weak var startLabel: UILabel!{
+        didSet{
+            startLabel.transform  = CGAffineTransform(scaleX: -1, y: 1)
+        }
+    }
     @IBOutlet weak var fromText: UITextView!
     @IBOutlet weak var toText: UITextView!
-    @IBOutlet weak var fromSelector: UITextField!
-    @IBOutlet weak var toSelector: UITextField!
-    @IBOutlet weak var translateBtn: UIButton!
+    @IBOutlet weak var fromSelector: UITextField!{
+        didSet{
+            fromSelector.getBlur(style: .light)
+            fromSelector.backgroundColor = .init(white: 0.5, alpha: 0.2)
+//            fromSelector.textColor = .white
+        }
+    }
+    @IBOutlet weak var toSelector: UITextField!{
+        didSet{
+            toSelector.getBlur(style: .light)
+            toSelector.backgroundColor = .init(white: 0.5, alpha: 0.2)
+//            toSelector.textColor = .white
+        }
+    }
+    @IBOutlet weak var translateBtn: UIButton!{
+        didSet{
+            translateBtn.getBlur(style: .light)
+        }
+    }
     static let identifier = "TranslateVC"
     var codes = LangCode.allCases
     var fromPicker = UIPickerView()
